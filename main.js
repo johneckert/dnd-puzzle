@@ -46,7 +46,7 @@ function createTile(text, i) {
 
 function createTiles() {
   const randomTiles = [...tiles];
-  // randomTiles.sort(() => Math.random() - 0.5);
+  randomTiles.sort(() => Math.random() - 0.5);
   randomTiles.forEach((text, i) => {
     const container = document.getElementById("grid");
     container.appendChild(createTile(text, i));
