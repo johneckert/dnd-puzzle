@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+body {
+  background: #a6a6a6;
+  background-image: url("./concrete.jpg");
+  background-size: cover;
+}
+
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 12px;
+  column-gap: 12px;
+  justify-content: center;
+  margin: 0;
+  font-family: "Cinzel", serif;
+  color: #424242;
+  font-weight: 700;
+}
+
+main > div {
+  margin: 0;
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  min-height: calc((100vh / 8) - 24px);
+  border: 1px dashed #c6c6c6;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.8);
+}
+
+.solved {
+  animation:success ease-in 3s forwards;
+}
+
+@keyframes success {
+  0% {
+    color:#424242;
+  }
+  100%{
+    color:hsl(179, 86%, 47%);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  main > div {
+    font-size: 1.3vw;
+    padding: 0;
+  }
+}
+
+main > div:nth-child(1), main > div:nth-child(10) {
+  grid-column: 1 / 3;
+}
+
+main > div:nth-child(2), main > div:nth-child(11) {
+  grid-column: 3 / 5;
+}
+
+main > div:nth-child(3), main > div:nth-child(12) {
+  grid-column: 5 / 7;
+}
+
+main > div:nth-child(4), main > div:nth-child(6), main > div:nth-child(8) {
+  grid-column: 1 / 4;
+}
+
+main > div:nth-child(5), main > div:nth-child(7), main > div:nth-child(9) {
+  grid-column: 4 / 7;
+}
